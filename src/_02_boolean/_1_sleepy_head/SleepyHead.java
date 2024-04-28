@@ -23,6 +23,7 @@ public class SleepyHead {
 		// there is no need for comparisons because it is already a true 
 		// or false value.
 		
+		
 		if(isWeekend) {
 			JOptionPane.showMessageDialog(null, "You can sleep in! There's no school today.");
 		}
