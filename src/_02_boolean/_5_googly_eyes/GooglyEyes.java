@@ -44,6 +44,7 @@ public class GooglyEyes extends PApplet {
     static final int HEIGHT = 600;
     
     PImage face;
+	
     
     @Override
     public void settings() {
@@ -53,16 +54,30 @@ public class GooglyEyes extends PApplet {
     
     @Override
     public void setup() {
-    	face = loadImage("doNotDelete.png");
-        face.resize(WIDTH,HEIGHT);
-    
+    	face = loadImage("/Users/league/git/level-0-module-4-liamdelrosario/src/_02_boolean/_5_googly_eyes/doNotDelete.png");
+        
+        
 		
 	}
-
+   
+	@SuppressWarnings("unused")
 	@Override
     public void draw() {
+		face.resize(WIDTH,HEIGHT);
+		background(face);
+		fill(255, 252, 252);
+		ellipse(302,181,150,150);
+		ellipse(490,182,150,150);
 
-    }
+		System.out.println("x"+mouseX);
+		System.out.println("y"+mouseY);
+		fill(000001);
+		if(mouseY<278&&mouseY>78&&mouseX<403&&mouseX>203) {
+			
+			ellipse(mouseX,mouseY,50,50);
+			ellipse(mouseX+200,mouseY+0,50,50);
+	    }
+	}
 
     static public void main(String[] args) {
         PApplet.main(GooglyEyes.class.getName());
